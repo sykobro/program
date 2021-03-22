@@ -1,6 +1,10 @@
 pipeline {
    agent any
+  triggers{
+       git push()
+  }
    stages {
+   
       stage('Example') {
          steps {
          	// Call the getChangeset function
